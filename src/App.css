@@ -275,6 +275,14 @@
   background: var(--wf-tag-bg);
 }
 
+/* Nav Controls (identity + language toggles) */
+.nav-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
 /* Identity Toggle */
 .identity-toggle {
   display: flex;
@@ -322,6 +330,36 @@
   transition: transform 0.25s var(--ease-out);
 }
 .toggle-thumb.right { transform: translateX(16px); }
+
+/* Language Toggle */
+.lang-toggle {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--wf-tag-bg);
+  border: 1.5px solid var(--wf-border);
+  border-radius: 999px;
+  padding: 6px 14px;
+  cursor: pointer;
+  transition: all 0.2s;
+  flex-shrink: 0;
+}
+.lang-toggle:hover {
+  border-color: var(--wf-accent);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.08);
+}
+
+/* RTL adjustments */
+[dir="rtl"] .hero-inner       { flex-direction: row-reverse; }
+[dir="rtl"] .about-grid       { direction: rtl; }
+[dir="rtl"] .featured-grid    { flex-direction: row-reverse; }
+[dir="rtl"] .nav-inner        { flex-direction: row-reverse; }
+[dir="rtl"] .footer-inner     { flex-direction: row-reverse; }
+[dir="rtl"] .timeline-body    { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .highlight-card   { flex-direction: row-reverse; text-align: right; }
+[dir="rtl"] .contact-grid     { direction: rtl; }
+[dir="rtl"] .section-header   { text-align: right; }
+[dir="rtl"] .section-header.center { text-align: center; }
 
 /* ─── TRANSITION OVERLAY ──────────────────────────────────────────── */
 .transition-overlay {
